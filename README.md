@@ -38,4 +38,4 @@ We'll supply these two in testImplementation and timeRuntimeOnly, respectively:
 
 # 참고 저장소
 
-- [whiteship-live-study by honux77](https://github.com/honux77/whiteship-live-study/tree/main/github-dashboard)
+- [whiteship-live-statistic by honux77](https://github.com/honux77/whiteship-live-statistic/tree/main/github-dashboard)

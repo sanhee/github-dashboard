@@ -12,15 +12,15 @@ import java.util.Set;
 
 public class GitHubLog {
 
-    private GHRepository repository;
+    private GHRepository ghRepository;
 
-    public GitHubLog(String repositoryName) {
-        repository = getRepo(repositoryName);
+    public GitHubLog(GitHub gitHub, String repository) throws IOException {
+        ghRepository = gitHub.getRepository(repository).getSource();
     }
 
     public String getIssue(int number) {
         try {
-            GHIssue issue = repository.getIssue(number);
+            GHIssue issue = ghRepository.getIssue(number);
             return issue.getBody();
         } catch (IOException e) {
             e.printStackTrace();
@@ -32,12 +32,12 @@ public class GitHubLog {
         List<GHIssueComment> comments = null;
 
         try {
-            comments = repository.getIssue(issueNum).getComments();
+            comments = ghRepository.getIssue(issueNum).getComments();
             Set<String> users = new HashSet<>();
             for(GHIssueComment comment : comments){
                 users.add(comment.getUser().getLogin());
             }
-            String ret[] = new String[users.size()];
+            String[] ret = new String[users.size()];
 
             int i = 0;
             for(String user : users){

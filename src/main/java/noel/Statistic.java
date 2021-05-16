@@ -35,11 +35,10 @@ public class Statistic {
     }
 
 
-    public void printOfRate(double max) {
+    public void printRate(double max) {
         for (Map.Entry<String, Integer> entry : participants.entrySet()) {
-            System.out.println("닉네임: " + entry.getKey() + "\t 참여율: " + entry.getValue() / max);
+            System.out.printf("닉네임: %s \t 참여율: %.2f%n",entry.getKey(),entry.getValue() / max * 100);
         }
-
     }
 
 }

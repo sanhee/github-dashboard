@@ -1,12 +1,23 @@
 
 # Github 대쉬보드 만들기
 
-- [Github 자바 라이브러리](https://github-api.kohsuke.org/dependency-info.html) 활용
+- [x] 깃헙 이슈 1번부터 15번까지 댓글을 순회하며 댓글을 남긴 사용자를 체크
+- [x] 참여율 % 표현
 
-- [ ] 깃헙 이슈 1번부터 15번까지 댓글을 순회하며 댓글을 남긴 사용자를 체크
-- [ ] 참여율 % 표현
+![img.png](img.png)
+![img_1.png](img_1.png)
+---
+
+## [Github 자바 라이브러리](https://github-api.kohsuke.org/dependency-info.html)
+- 사용한 인증방식: connect via `Personal access token`
+<br>
+  
+## [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
 --- 
+
+---
+
 ## JUnit5 테스트코드 에러
 
 ```shell

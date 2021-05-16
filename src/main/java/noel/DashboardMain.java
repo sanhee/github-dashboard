@@ -11,7 +11,7 @@ public class DashboardMain {
     public final static String REPOSITORY = "sanhee/live-study";
 
     // 토큰발행: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
-    public final static String TOKEN = "**********";
+    public final static String TOKEN = "*SECRET*SECRET*SECRET*";  //15:59
 
     public static void main(String[] args) throws IOException {
 
@@ -20,7 +20,7 @@ public class DashboardMain {
         Statistic statistic = new Statistic(gitHub, REPOSITORY);
 
         statistic.searchUserOfPostBy(1, 15);
-        statistic.printOfRate(15);
+        statistic.printRate(15);
 
     }
 }
